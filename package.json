@@ -1,0 +1,22 @@
+{
+  "name": "webserverexercise",
+  "version": "1.0.0",
+  "description": "practice for programming nodejs server",
+  "main": "01_hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maeg5854/WebServerExercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maeg5854/WebServerExercise/issues"
+  },
+  "homepage": "https://github.com/Maeg5854/WebServerExercise#readme",
+  "dependencies": {
+    "underscore": "^1.13.2"
+  }
+}
