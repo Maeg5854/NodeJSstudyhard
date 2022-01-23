@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Maeg5854/WebServerExercise#readme",
   "dependencies": {
+    "express": "^4.17.2",
     "underscore": "^1.13.2"
   }
 }
