@@ -1,8 +1,13 @@
 const express = require('express');
 var app = express(); // application을 리턴한다.
-
+app.locals.pretty = true;
+app.set('view engine', 'jade');
+app.set('views', './views')
 app.use(express.static('public')); // public 디렉토리를 정적파일 제공 디렉토리로 지정.
 
+app.get('/template', function(req, res){
+    res.render('temp', {time:'Hello', title_:'This is the moment'});
+});
 app.get('/dynamic', function(req, res){
     var lis = '';
     for (var i=0; i<5 ;i++){
