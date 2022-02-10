@@ -5,6 +5,25 @@ app.set('view engine', 'jade');
 app.set('views', './views')
 app.use(express.static('public')); // public 디렉토리를 정적파일 제공 디렉토리로 지정.
 
+// app.get('/topic', function(req, res){
+app.get('/topic/:id', function(req, res){
+
+    // 이 부분을 file/DB로 교체하면 나머지는 알아서 잘 작동
+    var topics = [
+        'javascripts is...',
+        'Nodejs is...',
+        'Express is... '
+    ];
+    // 이 부분도 프로그래밍적으로 생성해주도록 바꾸면 현대적인 어플리케이션을 만들 수 있다.
+    let output = `
+        <a href="/topic?id=0">JavaScript</a><br>
+        <a href="/topic?id=1">NodeJS</a><br><br>
+        <a href="/topic?id=2">Express</a><br><br>
+        ${topics[req.params.id]}
+    `
+    res.send(output);
+});
+
 app.get('/template', function(req, res){
     res.render('temp', {time:'Hello', title_:'This is the moment'});
 });
