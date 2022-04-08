@@ -23,6 +23,9 @@ app.get('/topic/:id', function(req, res){
     `
     res.send(output);
 });
+app.get('/form', function(req, res){
+    res.render('form');
+});
 
 app.get('/template', function(req, res){
     res.render('temp', {time:'Hello', title_:'This is the moment'});
