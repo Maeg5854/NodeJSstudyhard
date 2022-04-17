@@ -25,6 +25,7 @@ app.post('/form_receiver',(req,res)=>{
 });
 
 // 07_app.js의 예제를 POST방식으로 변경해보자!
+// 사용자가 입력한 정
 app.post('/topic', function(req, res){
 
     // 이 부분을 file/DB로 교체하면 나머지는 알아서 잘 작동
