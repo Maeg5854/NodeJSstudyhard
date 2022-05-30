@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>익스프레스 서버</title>
+</head>
+<body>
+  <div style="height:100px; width:200px; border:1px;">
+    <marquee style="height:100%; width:100%" direction="up" behavior="alternate"><marquee direction="up" behavior="alternate">Xillion</marquee></marquee>
+  </div>
+  
+  
+  <!-- Channel Plugin Scripts -->
+<script>
+  (function() {
+    var w = window;
+    if (w.ChannelIO) {
+      return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+    }
+    var ch = function() {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function(args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+    function l() {
+      if (w.ChannelIOInitialized) {
+        return;
+      }
+      w.ChannelIOInitialized = true;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (document.readyState === 'complete') {
+      l();
+    } else if (window.attachEvent) {
+      window.attachEvent('onload', l);
+    } else {
+      window.addEventListener('DOMContentLoaded', l, false);
+      window.addEventListener('load', l, false);
+    }
+  })();
+  ChannelIO('boot', {
+    "pluginKey": "1ca8ec83-67f3-4947-b8bd-e09626efe99b" //please fill with your plugin key
+  });
+</script>
+<!-- End Channel Plugin -->
+</body>
+</html>
