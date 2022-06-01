@@ -1,2 +1,7 @@
 **/node_modules/*
 **/node_modules/*
+secret_config.json
+learn-express/.env
+.gitignore
+learn-node-sns/.env
+.gitignore
